@@ -1,0 +1,100 @@
+.sidebar {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background: #fff;
+  padding-left: 16px;
+  font-family: 'SF Pro Display';
+  position: relative;
+}
+
+.logoProfileSectionWrapper {
+  padding-top: 30px;
+  background: #fff;
+  padding-bottom: 10px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.logoSection {
+  margin-bottom: 20px;
+}
+
+.title {
+  margin: 0;
+  font-family: 'Neue Montreal';
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  border-radius: 10px;
+}
+
+.profileInfo {
+  margin-left: 10px;
+}
+
+.profileNameContainer {
+  display: flex;
+  align-items: center;
+}
+
+.profileName {
+  margin-right: 20px;
+  color: #053559;
+  font-size: 18px;
+  font-family: 'SF Pro Display';
+  font-weight: 700;
+}
+
+.influencerType {
+  font-size: 12px;
+  color: #0d1821;
+}
+
+.scrollableContent {
+  flex-grow: 1;
+  overflow-y: auto;
+  padding-top: 24px;
+  padding-left: 20px;
+  padding-right: 20px;
+  scrollbar-width: thin;
+}
+
+.menu {
+  margin-bottom: 28px;
+  font-weight: 500;
+  font-family: 'SF Pro Display';
+  width: 246px;
+  border-right: none !important;
+}
+
+.campaignShortcuts {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 10px;
+  width: 246px;
+}
+
+.campaignShortcuts > button {
+  background-color: #e7f5ff;
+  color: #053559;
+}
+
+.listItem {
+  border-bottom: none !important;
+}
+
+.listItemTitle {
+  color: #0d1821;
+  font-family: 'SF Pro Display';
+  font-size: 13px;
+}

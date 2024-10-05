@@ -1,0 +1,41 @@
+.layout {
+  min-height: 100vh;
+}
+
+.sider {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  overflow-y: auto;
+}
+
+.contentLayout {
+  margin-left: 326px;
+}
+
+.header {
+  position: fixed;
+  top: 0;
+  left: 326px;
+  right: 0;
+  z-index: 1;
+  background: #fff;
+  padding: 0 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.mobileContentLayout {
+  margin-left: 0;
+}
+
+.content {
+  padding: 16px;
+  margin-top: 64px;
+}
+
+.mobileHeader {
+  left: 0;
+}
