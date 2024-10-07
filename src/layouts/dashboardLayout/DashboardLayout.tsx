@@ -1,9 +1,12 @@
 import React, { useState } from 'react';
-import { Layout, Button, Drawer } from 'antd';
-import { MenuOutlined } from '@ant-design/icons';
+import { Layout, Drawer } from 'antd';
 import { useMediaQuery } from 'react-responsive';
-import SidebarMenu from '../components/SidebarMenu';
-import styles from '../styles/DashBoardLayout.module.css';
+import SidebarMenu from '../../components/sidebarMenu/SidebarMenu';
+import styles from './DashBoardLayout.module.css';
+import {
+  DesktopHeader,
+  MobileHeader,
+} from '../../components/customHeader/CustomHeader';
 
 const { Header, Content, Sider } = Layout;
 
@@ -11,7 +14,15 @@ const DashBoardLayout: React.FC<{
   children: React.ReactNode;
 }> = ({ children }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+
   const isMobile = useMediaQuery({ maxWidth: 768 });
+  const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
+
+  const getDrawerWidth = () => {
+    if (isMobile) return '80%';
+    if (isTablet) return 250;
+    return 326;
+  };
 
   const toggleDrawer = () => {
     setDrawerVisible(!drawerVisible);
@@ -19,6 +30,7 @@ const DashBoardLayout: React.FC<{
 
   return (
     <Layout className={styles.layout}>
+      {/* Sidebar for non-mobile screens */}
       {!isMobile ? (
         <Sider width={326} theme="light" className={styles.sider}>
           <SidebarMenu />
@@ -29,7 +41,7 @@ const DashBoardLayout: React.FC<{
           placement="left"
           onClose={() => setDrawerVisible(false)}
           open={drawerVisible}
-          width={250}
+          width={getDrawerWidth()}
         >
           <SidebarMenu />
         </Drawer>
@@ -47,8 +59,10 @@ const DashBoardLayout: React.FC<{
               : `${styles.header} ${styles.mobileHeader}`
           }
         >
-          {isMobile && (
-            <Button icon={<MenuOutlined />} onClick={toggleDrawer} />
+          {isMobile ? (
+            <MobileHeader onClick={toggleDrawer} />
+          ) : (
+            <DesktopHeader />
           )}
         </Header>
 

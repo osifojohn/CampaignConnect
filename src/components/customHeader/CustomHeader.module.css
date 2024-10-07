@@ -1,0 +1,104 @@
+.mobileHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+  background: #fff;
+  font-family: 'SF Pro Display';
+  position: relative;
+  box-shadow: rgba(0, 0, 0, 0.1);
+}
+
+.menuButton {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menuButton {
+    display: none;
+  }
+}
+
+.profileSection {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Neue Montreal';
+  font-size: 18px;
+  font-weight: 700;
+}
+
+.dashboardHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+  z-index: 1000;
+  padding-top: 20px;
+}
+
+.dashboardHeader > h1 {
+  font-size: 18px;
+  line-height: 21.6px;
+  font-weight: 500;
+  font-family: 'Neue Montreal';
+}
+
+.dashboardHeaderRightSection {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.dashboardHeaderRightSection > button {
+  background: #002766;
+  font-family: 'SF Pro Display';
+  font-size: 14px;
+  font-weight: 500;
+}
+
+.dashboardHeaderRightSection > div {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+
+.iconsWrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.iconsWrapper:first-child {
+  width: 15px;
+  height: 15px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.iconsWrapper:last-child {
+  width: 15px;
+  height: 15px;
+  margin-right: 30px;
+  cursor: pointer;
+}
+
+.ellipesMessage {
+  width: 8px;
+  height: 8px;
+  left: 20px;
+  position: absolute;
+  bottom: 15px;
+}
+
+.ellipesNotification {
+  width: 8px;
+  height: 8px;
+  left: 15px;
+  position: absolute;
+  bottom: 15px;
+}

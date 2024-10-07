@@ -1,0 +1,46 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 16px;
+  width: 100%;
+  /* background: #fff; */
+  font-family: 'SF Pro Display';
+  position: relative;
+  /* box-shadow: rgba(0, 0, 0, 0.1); */
+}
+
+@media (max-width: 768px) {
+  .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+    width: 100%;
+    background: none;
+    font-family: 'SF Pro Display';
+    position: relative;
+    /* box-shadow: rgba(0, 0, 0, 0.1); */
+  }
+}
+
+.menu-button {
+  display: block;
+}
+
+@media (min-width: 768px) {
+  .menu-button {
+    display: none;
+  }
+}
+
+.profile-section {
+  display: flex;
+  align-items: center;
+}
+
+.logo {
+  font-family: 'Neue Montreal';
+  font-size: 18px;
+  font-weight: 700;
+}

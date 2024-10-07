@@ -1,0 +1,40 @@
+.inputContainer {
+  position: relative;
+  width: 450px;
+  overflow: hidden;
+}
+
+.searchInput {
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  background-color: #e7f5ff;
+  border: none;
+  height: 50px;
+  border-radius: 8px;
+}
+
+.searchInput::placeholder {
+  color: #0d1821;
+  font-size: 16px;
+  font-family: 'SF Pro Display';
+  line-height: 25.6px;
+  opacity: 0.7;
+  padding-left: 6px;
+}
+
+.inputContainer > button {
+  position: absolute;
+  right: 1px;
+  background-color: #053559;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 15px;
+}
+
+.inputContainer > button > img {
+  width: 12px;
+  height: 12px;
+  color: #fff;
+}

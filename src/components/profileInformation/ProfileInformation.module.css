@@ -1,0 +1,39 @@
+.profileInfoCard {
+  border-radius: 16px;
+  padding: 0px 10px;
+  border: 1px solid #bfbfbf;
+}
+
+.profileInfoCard .ant-card-head-title {
+  color: #053559 !important;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+}
+
+.profileDetails {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.profileDetails > :last-child {
+  width: 100%;
+  padding-bottom: 5px;
+  color: #053559;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'SF Pro Display';
+}
+
+.instructions {
+  width: 100%;
+  margin-top: 0;
+  color: #053559;
+  font-size: 14px;
+  font-weight: 400;
+  font-family: 'SF Pro Display';
+}

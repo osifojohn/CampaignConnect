@@ -11,3 +11,79 @@ body {
   background-color: #053559 !important;
   color: white !important;
 }
+
+.ant-list-item-meta {
+  display: flex;
+  align-items: center !important;
+}
+
+.ant-list-item-meta-avatar {
+  margin-inline-end: 8px !important;
+}
+
+.ant-list-item-meta-title > a {
+  font-family: 'SF Pro Display', sans-serif !important;
+  color: #0d1821 !important;
+  font-weight: 400 !important;
+}
+
+.ant-drawer-header-title {
+  justify-content: flex-end;
+}
+.ant-drawer-title {
+  display: none;
+}
+
+.ant-drawer-body {
+  padding: 20px 10px 0 0 !important;
+}
+
+.ant-card-body {
+  padding: 0px 0px 9px 0px !important;
+}
+
+/* .ant-layout-header {
+  background: inherit;
+}
+
+@media (min-width: 769px) {
+  .ant-layout-header {
+    background: none !important;
+  }
+} */
+
+/* .dashboard-container {
+  padding: 20px;
+} */
+
+.financial-profile-section {
+  margin-bottom: 20px;
+}
+
+.search-sort-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.sort-by {
+  display: flex;
+  align-items: center;
+}
+
+.list-grid-icons i {
+  font-size: 18px;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .search-sort-section {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .sort-by {
+    margin-top: 10px;
+  }
+}

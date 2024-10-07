@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Menu, Avatar, Typography, Dropdown, List, Button } from 'antd';
-import styles from '../styles/SidebarMenu.module.css';
+import styles from './SidebarMenu.module.css';
 
-import homeIcon from '../../public/icons/fluent_home-16-regular.png';
-import compassIcon from '../../public/icons/compass.svg';
-import messageIcon from '../../public/icons/fluent_chat-mail-20-regular.svg';
-import earningIcon from '../../public/icons/earning.svg';
-import settingsIcon from '../../public/icons/galaSettings0.svg';
+import homeIcon from '../../../public/icons/fluent_home-16-regular.png';
+import compassIcon from '../../../public/icons/compass.svg';
+import messageIcon from '../../../public/icons/compass.svg';
+import earningIcon from '../../../public/icons/earning.svg';
+import settingsIcon from '../../../public/icons/galaSettings0.svg';
 
-import techreviewIcon from '../../public/icons/techreview.svg';
-import beautyblendIcon from '../../public/icons/beautyblend.svg';
-import wanderlustIcon from '../../public/icons/wanderlust.svg';
-import fitnessIcon from '../../public/icons/fitness.svg';
-import homeharmonyIcon from '../../public/icons/homeharmony.svg';
+import techreviewIcon from '../../../public/icons/techreview.svg';
+import beautyblendIcon from '../../../public/icons/beautyblend.svg';
+import wanderlustIcon from '../../../public/icons/wanderlust.svg';
+import fitnessIcon from '../../../public/icons/fitness.svg';
+import homeharmonyIcon from '../../../public/icons/homeharmony.svg';
 
-import AvartarIcon from '../../public/icons/profile.svg';
-import dropDownIcon from '../../public/icons/code.svg';
-import arrowRightIcon from '../../public/icons/arrow-right.svg';
+import AvartarIcon from '../../../public/icons/profile.svg';
+import dropDownIcon from '../../../public/icons/code.svg';
+import arrowRightIcon from '../../../public/icons/arrow-right.svg';
 
 const { Text } = Typography;
 
@@ -71,7 +71,7 @@ const SidebarMenu: React.FC = () => {
                 <Text strong className={styles.profileName}>
                   Olivia Jacobs
                 </Text>
-                {renderIcon(dropDownIcon, 'dropdown icon', '10px')}
+                {renderIcon(dropDownIcon, 'dropdown icon', '17px')}
               </div>
             </Dropdown>
             <Text type="secondary" className={styles.influencerType}>

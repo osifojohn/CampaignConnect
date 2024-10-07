@@ -8,6 +8,7 @@
   left: 0;
   height: 100vh;
   overflow-y: auto;
+  width: 100%;
 }
 
 .contentLayout {
@@ -25,6 +26,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 1000;
 }
 
 .mobileContentLayout {
