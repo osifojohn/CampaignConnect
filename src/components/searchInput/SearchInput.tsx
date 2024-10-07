@@ -2,13 +2,11 @@ import React, { useState } from 'react';
 import styles from './SearchComponent.module.css';
 import searchIcon from '../../../public/icons/searchIcon.svg';
 
-interface SearchComponentProps {
+interface SearchInputProps {
   onSearch: (value: string) => void;
 }
 
-export const SearchComponent: React.FC<SearchComponentProps> = ({
-  onSearch,
-}) => {
+export const SearchInput: React.FC<SearchInputProps> = ({ onSearch }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -29,6 +27,7 @@ export const SearchComponent: React.FC<SearchComponentProps> = ({
 
   return (
     <div className={styles.inputContainer}>
+      <span></span>
       <input
         placeholder="Search Description"
         value={inputValue}

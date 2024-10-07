@@ -1,0 +1,29 @@
+.sortContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.sortContainer > :first-child {
+  font-family: 'SF Pro Display';
+  line-height: 25.6px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sortContainer > :first-child > h3 {
+  margin-right: 4px;
+  font-weight: 400;
+}
+
+.sortContainer > :first-child > p {
+  font-weight: 500;
+}
+
+.listWrapper {
+  background: #fff;
+  box-shadow: rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
