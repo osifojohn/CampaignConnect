@@ -14,10 +14,7 @@ interface MobileHeaderProps {
 }
 
 interface DesktopHeaderProps {
-  pageHeading?: string;
-  onClickCreateCampain?: () => void;
-  onClickOpenMessage?: () => void;
-  onClickOpenNotification?: () => void;
+  onClick: () => void;
 }
 
 export const MobileHeader: React.FC<MobileHeaderProps> = ({ onClick }) => {
@@ -36,12 +33,17 @@ export const MobileHeader: React.FC<MobileHeaderProps> = ({ onClick }) => {
   );
 };
 
-export const DesktopHeader: React.FC<DesktopHeaderProps> = () => {
+export const DesktopHeader: React.FC<DesktopHeaderProps> = ({ onClick }) => {
   return (
     <div className={styles.dashboardHeader}>
       <h1>Dashboard</h1>
       <div className={styles.dashboardHeaderRightSection}>
-        <Button type="primary" icon={<PlusOutlined />} size="large">
+        <Button
+          onClick={onClick}
+          type="primary"
+          icon={<PlusOutlined />}
+          size="large"
+        >
           Create a New Campaign
         </Button>
         <div>

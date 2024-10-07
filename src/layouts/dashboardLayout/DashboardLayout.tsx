@@ -7,6 +7,7 @@ import {
   DesktopHeader,
   MobileHeader,
 } from '../../components/customHeader/CustomHeader';
+import CreateCampaign from '../../components/createCampaignForm/CreateCampaign';
 
 const { Header, Content, Sider } = Layout;
 
@@ -18,14 +19,15 @@ const DashBoardLayout: React.FC<{
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
 
+  const [campaignModalVisible, setCampaignModalVisible] = useState(false);
+  const toggleDrawer = () => setDrawerVisible(!drawerVisible);
+  const toggleCampaignModal = () =>
+    setCampaignModalVisible(!campaignModalVisible);
+
   const getDrawerWidth = () => {
     if (isMobile) return '80%';
     if (isTablet) return 250;
     return 326;
-  };
-
-  const toggleDrawer = () => {
-    setDrawerVisible(!drawerVisible);
   };
 
   return (
@@ -62,11 +64,16 @@ const DashBoardLayout: React.FC<{
           {isMobile ? (
             <MobileHeader onClick={toggleDrawer} />
           ) : (
-            <DesktopHeader />
+            <DesktopHeader onClick={toggleCampaignModal} />
           )}
         </Header>
 
         <Content className={styles.content}>{children}</Content>
+
+        <CreateCampaign
+          visible={campaignModalVisible}
+          onClose={toggleCampaignModal}
+        />
       </Layout>
     </Layout>
   );
