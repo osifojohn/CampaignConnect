@@ -45,12 +45,24 @@
   align-items: center;
 }
 
+.checkbox > :first-child {
+  margin: 0;
+  display: none;
+}
+
+.checkbox > :last-child {
+  padding-inline-start: 2px;
+  padding-inline-end: 2px;
+  margin: 0;
+}
+
 .icon {
   font-size: 24px;
   height: 48px;
   width: 48px;
   color: #888;
   margin-top: 0;
+  margin-right: 0;
   cursor: pointer;
 }
 

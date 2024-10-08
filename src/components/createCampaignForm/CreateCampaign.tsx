@@ -1,11 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Modal, Form, Input, Button, Select, Checkbox, Space } from 'antd';
-import {
-  InstagramOutlined,
-  YoutubeOutlined,
-  TwitterOutlined,
-  FacebookOutlined,
-} from '@ant-design/icons';
 import styles from './CreateCampaign.module.css';
 
 import instagramLightIcon from '../../../public/icons/instagramLight.svg';
@@ -13,6 +7,8 @@ import youtubeLightIcon from '../../../public/icons/youtubeLight.svg';
 import twitterLightIcon from '../../../public/icons/twitterLight.png';
 import facebookLightIcon from '../../../public/icons/facebookLight.svg';
 import tiktokLightIcon from '../../../public/icons/tiktokLight.svg';
+import CampaignRepository from '../../lib/CampaignRepository';
+import { Campaign } from '../../types';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -20,19 +16,55 @@ const { Option } = Select;
 interface CreateCampaignProps {
   visible: boolean;
   onClose: () => void;
+  onCampaignAdded: () => void;
 }
 
 const CreateCampaign: React.FC<CreateCampaignProps> = ({
   visible,
   onClose,
+  onCampaignAdded,
 }) => {
   const [form] = Form.useForm();
+  // const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
+
+  // const onFinish = (values: any) => {
+  //   console.log('Form values:', values);
+  //   onClose();
+  //   form.resetFields();
+  // };
+
+  // const handleChannelChange = (checkedValues: any) => {
+  //   setSelectedChannels(checkedValues);
+  // };
+
+  const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
 
   const onFinish = (values: any) => {
-    console.log('Form values:', values);
+    const newCampaign: Campaign = {
+      id: Date.now(),
+      campaignTitle: values.campaignTitle,
+      brandName: values.brandName,
+      campaignCategory: values.campaignCategory,
+      campaignDescription: values.campaignDescription,
+      preferredChannels: values.preferredChannels,
+      campaignBudget: values.campaignBudget,
+    };
+
+    CampaignRepository.addCampaign(newCampaign);
+    onCampaignAdded();
     onClose();
     form.resetFields();
   };
+
+  const handleChannelChange = (checkedValues: any) => {
+    setSelectedChannels(checkedValues);
+  };
+
+  const getIconStyle = (channel: string) => ({
+    border: selectedChannels.includes(channel) ? '1.7px solid #1890ff' : 'none',
+    borderRadius: '12%',
+    // padding: '1px',
+  });
 
   return (
     <Modal
@@ -80,12 +112,9 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
             placeholder="Select your campaign category"
             className={styles.selectInput}
           >
-            <Option value="productReview">Product Review</Option>
-            <Option value="sponsoredContent">Sponsored Content</Option>
-            <Option value="socialMediaEngagement">
-              Social Media Engagement
-            </Option>
-            <Option value="other">Other</Option>
+            <Option value="entertainment">Entertainment</Option>
+            <Option value="movie">Movie</Option>
+            <Option value="games">Games</Option>
           </Select>
         </Form.Item>
 
@@ -107,42 +136,61 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
         </Form.Item>
 
         <Form.Item
+          name="preferredChannels"
           label={<div className={styles.label}>Select Preferred Channels</div>}
+          rules={[
+            {
+              required: true,
+              message: 'Please select at least one channel',
+              type: 'array',
+              min: 1,
+            },
+          ]}
         >
-          <Space className={styles.iconSpace}>
-            <div>
-              <img
-                alt="instagram"
-                className={styles.icon}
-                src={instagramLightIcon}
-              />
-            </div>
-            <div>
-              <img alt="tiktok" className={styles.icon} src={tiktokLightIcon} />
-            </div>
-            <div>
-              <img
-                alt="youtube"
-                className={styles.icon}
-                src={youtubeLightIcon}
-              />
-            </div>
-            <div>
-              <img
-                alt="twitter"
-                className={styles.icon}
-                src={twitterLightIcon}
-              />
-            </div>
-
-            <div>
-              <img
-                alt="facebook"
-                className={styles.icon}
-                src={facebookLightIcon}
-              />
-            </div>
-          </Space>
+          <Checkbox.Group onChange={handleChannelChange}>
+            <Space className={styles.iconSpace}>
+              <Checkbox className={styles.checkbox} value="instagram">
+                <img
+                  alt="instagram"
+                  src={instagramLightIcon}
+                  className={styles.icon}
+                  style={getIconStyle('instagram')}
+                />
+              </Checkbox>
+              <Checkbox className={styles.checkbox} value="tiktok">
+                <img
+                  alt="tiktok"
+                  src={tiktokLightIcon}
+                  className={styles.icon}
+                  style={getIconStyle('tiktok')}
+                />
+              </Checkbox>
+              <Checkbox className={styles.checkbox} value="youtube">
+                <img
+                  alt="youtube"
+                  src={youtubeLightIcon}
+                  className={styles.icon}
+                  style={getIconStyle('youtube')}
+                />
+              </Checkbox>
+              <Checkbox className={styles.checkbox} value="twitter">
+                <img
+                  alt="twitter"
+                  src={twitterLightIcon}
+                  className={styles.icon}
+                  style={getIconStyle('twitter')}
+                />
+              </Checkbox>
+              <Checkbox className={styles.checkbox} value="facebook">
+                <img
+                  alt="facebook"
+                  src={facebookLightIcon}
+                  className={styles.icon}
+                  style={getIconStyle('facebook')}
+                />
+              </Checkbox>
+            </Space>
+          </Checkbox.Group>
         </Form.Item>
 
         <Form.Item

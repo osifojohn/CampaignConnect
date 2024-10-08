@@ -13,13 +13,14 @@ const { Header, Content, Sider } = Layout;
 
 const DashBoardLayout: React.FC<{
   children: React.ReactNode;
-}> = ({ children }) => {
+  onCampaignAdded: () => void;
+}> = ({ children, onCampaignAdded }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
+  const [campaignModalVisible, setCampaignModalVisible] = useState(false);
 
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
 
-  const [campaignModalVisible, setCampaignModalVisible] = useState(false);
   const toggleDrawer = () => setDrawerVisible(!drawerVisible);
   const toggleCampaignModal = () =>
     setCampaignModalVisible(!campaignModalVisible);
@@ -73,6 +74,7 @@ const DashBoardLayout: React.FC<{
         <CreateCampaign
           visible={campaignModalVisible}
           onClose={toggleCampaignModal}
+          onCampaignAdded={onCampaignAdded}
         />
       </Layout>
     </Layout>

@@ -5,61 +5,14 @@ import styles from './CampaignList.module.css';
 
 import CampaignCard from '../campaignCard/CampaignCard';
 import { SortComponent } from '../sortComponent/SortComponent';
+import { Campaign } from '../../types';
 
-const campaigns = [
-  {
-    title: 'Epic Social Buzz',
-    company: 'Samsung',
-    type: 'Product Review',
-    postedDays: '2 days',
-    budget: '$1000 - $2000',
-    channels: ['facebook', 'twitter', 'youtube', 'instagram'],
-  },
-  {
-    title: 'Connect & Trend',
-    company: 'Samsung',
-    type: 'Product Review',
-    postedDays: '2 days',
-    budget: '$1000 - $2000',
-    channels: ['facebook', 'twitter', 'youtube', 'instagram'],
-  },
+// Define props interface
+interface CampaignListProps {
+  campaigns: Campaign[]; // Accept campaigns as props
+}
 
-  {
-    title: 'Epic Social Buzz',
-    company: 'Samsung',
-    type: 'Product Review',
-    postedDays: '2 days',
-    budget: '$1000 - $2000',
-    channels: ['facebook', 'twitter', 'youtube', 'instagram'],
-  },
-  {
-    title: 'Connect & Trend',
-    company: 'Samsung',
-    type: 'Product Review',
-    postedDays: '2 days',
-    budget: '$1000 - $2000',
-    channels: ['facebook', 'twitter', 'youtube', 'instagram'],
-  },
-
-  {
-    title: 'Epic Social Buzz',
-    company: 'Samsung',
-    type: 'Product Review',
-    postedDays: '2 days',
-    budget: '$1000 - $2000',
-    channels: ['facebook', 'twitter', 'youtube', 'instagram'],
-  },
-  {
-    title: 'Connect & Trend',
-    company: 'Samsung',
-    type: 'Product Review',
-    postedDays: '2 days',
-    budget: '$1000 - $2000',
-    channels: ['facebook', 'twitter', 'youtube', 'instagram'],
-  },
-];
-
-const CampaignList: React.FC = () => {
+const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('list');
   const [category, setCategory] = useState<string>('Category');
 
@@ -67,7 +20,7 @@ const CampaignList: React.FC = () => {
     <>
       <div className={styles.sortContainer}>
         <div>
-          <h3>Search results:</h3> <p>432 Blog post campaigns</p>
+          <h3>Search results:</h3> <p>{campaigns.length} Blog post campaigns</p>
         </div>
         <SortComponent
           category={category}
@@ -94,7 +47,9 @@ const CampaignList: React.FC = () => {
         }
         dataSource={campaigns}
         renderItem={(item) => (
-          <List.Item key={item.title}>
+          <List.Item key={item.id}>
+            {' '}
+            {/* Use id instead of title for keys */}
             <CampaignCard {...item} />
           </List.Item>
         )}

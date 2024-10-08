@@ -8,68 +8,84 @@ import tiktokIcon from '../../../public/icons/tiktok.svg';
 import youtubeIcon from '../../../public/icons/youtube.svg';
 import twitterIcon from '../../../public/icons/twitter.svg';
 import facebookIcon from '../../../public/icons/facebook.svg';
+import { Campaign } from '../../types';
 
-interface CampaignCardProps {
-  title: string;
-  company: string;
-  type: string;
-  postedDays: string;
-  budget: string;
-  channels: string[];
-}
+const iconMap: { [key: string]: string } = {
+  instagram: instagramIcon,
+  tiktok: tiktokIcon,
+  youtube: youtubeIcon,
+  twitter: twitterIcon,
+  facebook: facebookIcon,
+};
 
-const CampaignCard: React.FC<CampaignCardProps> = ({
-  title,
-  company,
-  type,
-  postedDays,
-  budget,
-  channels,
+const CampaignCard: React.FC<Campaign> = ({
+  campaignTitle,
+  brandName,
+  campaignCategory,
+  postedDate,
+  campaignBudget,
+  campaignDescription,
+  preferredChannels,
 }) => {
+  const formattedDate = new Intl.DateTimeFormat('en-US', {
+    year: 'numeric',
+    month: 'numeric',
+    day: 'numeric',
+  }).format(new Date(postedDate));
+
+  const formattedBudget = new Intl.NumberFormat('en-US', {
+    style: 'currency',
+    currency: 'USD',
+  }).format(Number(campaignBudget));
+
   return (
     <div className={styles.card}>
       <div className={styles.header}>
-        <div className={styles.tag}>{title?.slice(0, 2)}</div>
+        <div className={styles.tag}>{campaignTitle?.slice(0, 2)}</div>
         <div>
           <div>
-            <h3 className={styles.title}>{title}</h3>
+            <h3 className={styles.campaignTitle}>{campaignTitle}</h3>
             <div className={styles.postedDaysAgo}>
-              Posted {postedDays} ago{' '}
+              Posted {formattedDate} ago{' '}
               <div>
                 <img src={saveCampaignIcon} alt="save" />
               </div>
             </div>
           </div>
           <p className={styles.productCategoryBox}>
-            {company} • {type}
+            {brandName} • {campaignCategory}
           </p>
         </div>
       </div>
 
-      <p className={styles.description}>
-        Aliquam massa donec proin sit duis magna eu maecenas. Ultricies id
-        mattis lobortis proin congue proin elementum. Sed ac porttitor metus
-        ante et suspesstn ....
-      </p>
+      <p className={styles.description}>{campaignDescription}</p>
 
       <Row>
         <Col span={'100%'}>
           <div className={styles.channelsWrapper}>
             <span>Channels</span>
             <div className={styles.channels}>
-              <img src={instagramIcon} alt="" className={styles.icon} />
-              <img src={tiktokIcon} alt="" className={styles.icon} />
-              <img src={youtubeIcon} alt="" className={styles.icon} />
-              <img src={twitterIcon} alt="" className={styles.icon} />
-              <img src={facebookIcon} alt="" className={styles.icon} />
-              <span>+ {channels?.length - 3} more</span>
+              {preferredChannels.map(
+                (channel) =>
+                  iconMap[channel] && (
+                    <img
+                      key={channel}
+                      src={iconMap[channel]}
+                      alt={channel}
+                      className={styles.icon}
+                    />
+                  )
+              )}
+              {preferredChannels.length > 5 && (
+                <span>+ {preferredChannels.length - 5} more</span>
+              )}
             </div>
           </div>
         </Col>
         <Col span={'100%'} className={styles.buttomSection}>
           <div className={styles.budgetWrapper}>
             <p>Budget</p>
-            <h4>{budget}</h4>
+            <h4>{formattedBudget}</h4>
           </div>
           <Button type="primary">Apply Now</Button>
         </Col>
