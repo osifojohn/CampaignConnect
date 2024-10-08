@@ -4,10 +4,16 @@ import styles from './FinancialOverview.module.css';
 import iconOpenOutline from '../../../public/icons/iconOpenOutline.svg';
 import ellipesWhite from '../../../public/icons/ellipesWhite.svg';
 
-const FinancialOverview: React.FC = () => {
+type FinancialOverviewProps = {
+  isLargeScreen?: boolean;
+};
+
+const FinancialOverview: React.FC<FinancialOverviewProps> = ({
+  isLargeScreen = false,
+}) => {
   return (
     <>
-      <Col xs={24} md={16}>
+      <Col xs={24} md={isLargeScreen ? 16 : 24}>
         <Card
           title="Financial Overview"
           extra={

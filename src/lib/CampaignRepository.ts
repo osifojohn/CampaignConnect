@@ -13,7 +13,7 @@ class CampaignRepository {
   }
 
   addCampaign(campaign: Campaign) {
-    this.campaigns.push(campaign);
+    this.campaigns.unshift(campaign);
   }
 
   getAllCampaigns() {

@@ -1,7 +1,7 @@
 import React from 'react';
 import { Button, Row, Col } from 'antd';
 import styles from './CampaignCard.module.css';
-
+import { formatBudget, formatDate } from '../../utils';
 import saveCampaignIcon from '../../../public/icons/saveCampaign.svg';
 import instagramIcon from '../../../public/icons/instagram-fill.svg';
 import tiktokIcon from '../../../public/icons/tiktok.svg';
@@ -9,6 +9,11 @@ import youtubeIcon from '../../../public/icons/youtube.svg';
 import twitterIcon from '../../../public/icons/twitter.svg';
 import facebookIcon from '../../../public/icons/facebook.svg';
 import { Campaign } from '../../types';
+
+type CampaignCardProps = Campaign & {
+  viewMode: 'grid' | 'list';
+  isLargeScreen: boolean;
+};
 
 const iconMap: { [key: string]: string } = {
   instagram: instagramIcon,
@@ -18,7 +23,7 @@ const iconMap: { [key: string]: string } = {
   facebook: facebookIcon,
 };
 
-const CampaignCard: React.FC<Campaign> = ({
+const CampaignCard: React.FC<CampaignCardProps> = ({
   campaignTitle,
   brandName,
   campaignCategory,
@@ -26,17 +31,14 @@ const CampaignCard: React.FC<Campaign> = ({
   campaignBudget,
   campaignDescription,
   preferredChannels,
+  viewMode,
+  isLargeScreen,
 }) => {
-  const formattedDate = new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'numeric',
-    day: 'numeric',
-  }).format(new Date(postedDate));
-
-  const formattedBudget = new Intl.NumberFormat('en-US', {
-    style: 'currency',
-    currency: 'USD',
-  }).format(Number(campaignBudget));
+  const descriptionLimit = viewMode === 'grid' && isLargeScreen ? 110 : 300;
+  const truncatedDescription =
+    campaignDescription.length > descriptionLimit
+      ? campaignDescription.slice(0, descriptionLimit) + '...'
+      : campaignDescription;
 
   return (
     <div className={styles.card}>
@@ -46,7 +48,7 @@ const CampaignCard: React.FC<Campaign> = ({
           <div>
             <h3 className={styles.campaignTitle}>{campaignTitle}</h3>
             <div className={styles.postedDaysAgo}>
-              Posted {formattedDate} ago{' '}
+              Posted {formatDate(postedDate)} ago{' '}
               <div>
                 <img src={saveCampaignIcon} alt="save" />
               </div>
@@ -58,7 +60,7 @@ const CampaignCard: React.FC<Campaign> = ({
         </div>
       </div>
 
-      <p className={styles.description}>{campaignDescription}</p>
+      <p className={styles.description}>{truncatedDescription}</p>
 
       <Row>
         <Col span={'100%'}>
@@ -85,7 +87,7 @@ const CampaignCard: React.FC<Campaign> = ({
         <Col span={'100%'} className={styles.buttomSection}>
           <div className={styles.budgetWrapper}>
             <p>Budget</p>
-            <h4>{formattedBudget}</h4>
+            <h4>{formatBudget(campaignBudget)}</h4>
           </div>
           <Button type="primary">Apply Now</Button>
         </Col>

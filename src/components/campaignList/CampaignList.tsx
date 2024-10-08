@@ -1,19 +1,24 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { List } from 'antd';
+import { useMediaQuery } from 'react-responsive';
 
 import styles from './CampaignList.module.css';
-
 import CampaignCard from '../campaignCard/CampaignCard';
 import { SortComponent } from '../sortComponent/SortComponent';
 import { Campaign } from '../../types';
 
-// Define props interface
 interface CampaignListProps {
-  campaigns: Campaign[]; // Accept campaigns as props
+  campaigns: Campaign[];
 }
 
 const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
-  const [viewMode, setViewMode] = useState<'grid' | 'list'>('list');
+  const isLargeScreen = useMediaQuery({ query: '(min-width: 1000px)' });
+  const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
+
+  useEffect(() => {
+    setViewMode(isLargeScreen ? 'grid' : 'list');
+  }, [isLargeScreen]);
+
   const [category, setCategory] = useState<string>('Category');
 
   return (
@@ -22,12 +27,14 @@ const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
         <div>
           <h3>Search results:</h3> <p>{campaigns.length} Blog post campaigns</p>
         </div>
-        <SortComponent
-          category={category}
-          onCategoryChange={setCategory}
-          viewMode={viewMode}
-          onViewModeChange={setViewMode}
-        />
+        {isLargeScreen ? (
+          <SortComponent
+            category={category}
+            onCategoryChange={setCategory}
+            viewMode={viewMode}
+            onViewModeChange={setViewMode}
+          />
+        ) : null}
       </div>
 
       <List
@@ -36,21 +43,23 @@ const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
           viewMode === 'grid'
             ? {
                 gutter: 16,
-                xs: 1, // 1 column on extra small screens (mobile)
-                sm: 1, // 1 columns on small screens (tablet)
-                md: 1, // 1 columns on medium screens
-                lg: 2, // 2 columns on large screens (desktop)
-                xl: 3, // 3 columns on extra large screens (large desktop)
-                xxl: 4, // 4 columns on extra large screens (larger desktop)
+                xs: 1,
+                sm: 1,
+                md: 1,
+                lg: 2,
+                xl: 3,
+                xxl: 4,
               }
             : undefined
         }
         dataSource={campaigns}
         renderItem={(item) => (
           <List.Item key={item.id}>
-            {' '}
-            {/* Use id instead of title for keys */}
-            <CampaignCard {...item} />
+            <CampaignCard
+              {...item}
+              viewMode={viewMode}
+              isLargeScreen={isLargeScreen}
+            />
           </List.Item>
         )}
       />

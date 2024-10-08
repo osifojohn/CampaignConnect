@@ -25,23 +25,12 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
   onCampaignAdded,
 }) => {
   const [form] = Form.useForm();
-  // const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
-
-  // const onFinish = (values: any) => {
-  //   console.log('Form values:', values);
-  //   onClose();
-  //   form.resetFields();
-  // };
-
-  // const handleChannelChange = (checkedValues: any) => {
-  //   setSelectedChannels(checkedValues);
-  // };
-
   const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
 
   const onFinish = (values: any) => {
     const newCampaign: Campaign = {
       id: Date.now(),
+      postedDate: Date.now(),
       campaignTitle: values.campaignTitle,
       brandName: values.brandName,
       campaignCategory: values.campaignCategory,
@@ -198,9 +187,16 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
           name="campaignBudget"
           rules={[
             { required: true, message: 'Please enter your campaign budget' },
+            {
+              type: 'number',
+              min: 0,
+              transform: (value) => Number(value),
+              message: 'Campaign budget must be a positive number',
+            },
           ]}
         >
           <Input
+            type="number"
             placeholder="Enter your campaign budget"
             className={styles.inputField}
           />

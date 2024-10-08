@@ -1,6 +1,12 @@
-.inputContainer {
+.desktopInputContainer {
   position: relative;
   max-width: 450px;
+  width: 100%;
+  overflow: hidden;
+}
+
+.mobileInputContainer {
+  position: relative;
   width: 100%;
   overflow: hidden;
 }
@@ -25,7 +31,15 @@
   padding-left: 6px;
 }
 
-.inputContainer > button {
+@media (max-width: 999px) {
+  .searchInput::placeholder {
+    /* position: absolute; */
+    padding-left: 30px;
+    margin-left: 40px;
+  }
+}
+
+.desktopInputContainer > .desktopButton {
   position: absolute;
   right: 1px;
   background-color: #053559;
@@ -35,8 +49,44 @@
   padding: 0 15px;
 }
 
-.inputContainer > button > img {
+.mobileInputContainer > .mobileButton {
+  position: absolute;
+  left: 1px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 15px;
+  background-color: transparent;
+}
+
+.mobileInputContainer > .mobileButton {
+  position: absolute;
+  left: 1px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 15px;
+  background-color: transparent;
+}
+
+.mobileInputContainer > .mobileButton {
+  position: absolute;
+  left: 1px;
+  height: 50px;
+  border-radius: 8px;
+  border: none;
+  padding: 0 15px;
+  background-color: transparent;
+}
+
+.searchIcon {
+  color: #fff;
   width: 12px;
   height: 12px;
-  color: #fff;
+}
+
+@media (max-width: 999px) {
+  .searchIcon {
+    color: #053559;
+  }
 }
