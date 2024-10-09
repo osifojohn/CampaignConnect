@@ -1,6 +1,5 @@
 .sortContainer {
   width: 100%;
-  /* margin-bottom: 16px; */
   display: flex;
   justify-content: flex-end;
   align-items: center;
@@ -18,5 +17,5 @@
 }
 
 .activeIcon {
-  color: blue;
+  color: var(--color-primary);
 }

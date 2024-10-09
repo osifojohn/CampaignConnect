@@ -15,7 +15,7 @@
   font-size: 16px;
   width: 100%;
   outline: none;
-  background-color: #e7f5ff;
+  background-color: var(--color-light-blue-background);
   border: none;
   height: 50px;
   border-radius: 8px;
@@ -23,9 +23,9 @@
 }
 
 .searchInput::placeholder {
-  color: #0d1821;
+  color: var(--color-placeholder);
   font-size: 16px;
-  font-family: 'SF Pro Display';
+  font-family: var(--font-family-sf);
   line-height: 25.6px;
   opacity: 0.7;
   padding-left: 6px;
@@ -33,7 +33,6 @@
 
 @media (max-width: 999px) {
   .searchInput::placeholder {
-    /* position: absolute; */
     padding-left: 30px;
     margin-left: 40px;
   }
@@ -42,31 +41,11 @@
 .desktopInputContainer > .desktopButton {
   position: absolute;
   right: 1px;
-  background-color: #053559;
+  background-color: var(--color-primary);
   height: 50px;
   border-radius: 8px;
   border: none;
   padding: 0 15px;
-}
-
-.mobileInputContainer > .mobileButton {
-  position: absolute;
-  left: 1px;
-  height: 50px;
-  border-radius: 8px;
-  border: none;
-  padding: 0 15px;
-  background-color: transparent;
-}
-
-.mobileInputContainer > .mobileButton {
-  position: absolute;
-  left: 1px;
-  height: 50px;
-  border-radius: 8px;
-  border: none;
-  padding: 0 15px;
-  background-color: transparent;
 }
 
 .mobileInputContainer > .mobileButton {
@@ -80,13 +59,13 @@
 }
 
 .searchIcon {
-  color: #fff;
+  color: var(--color-white);
   width: 12px;
   height: 12px;
 }
 
 @media (max-width: 999px) {
   .searchIcon {
-    color: #053559;
+    color: var(--color-primary);
   }
 }

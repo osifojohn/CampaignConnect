@@ -1,0 +1,100 @@
+.profileInfoCard {
+  border-radius: 16px;
+  padding: 0px 5px;
+  border: 1px solid var(--color-primary);
+}
+
+.profileInfoCard .ant-card-head-title {
+  color: var(--color-primary) !important;
+}
+
+.avatar {
+  width: 56px;
+  height: 56px;
+  border-radius: 10px;
+}
+
+.profileDetails {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+}
+
+.profileDetails > :last-child {
+  width: 100%;
+  padding-bottom: 5px;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-family-sf);
+}
+
+.instructions {
+  width: 100%;
+  margin-top: 0;
+  color: var(--color-primary);
+  font-size: 14px;
+  font-weight: 400;
+  font-family: var(--font-family-sf);
+}
+
+/* Styles for smaller screens */
+.smallerProfileCard {
+  border-radius: 16px;
+  height: 209px;
+  width: 100%;
+  padding: 16px;
+  text-align: center;
+  background: var(--color-light-blue-background);
+  margin-bottom: 30px;
+}
+
+.profileTitle {
+  font-size: 10px;
+  font-weight: 700;
+  line-height: 19.6px;
+  line-height: 14px;
+  font-size: var(--font-family-sf);
+  color: var(--color-dark-blue);
+  margin-bottom: 0;
+}
+
+.profileDescription {
+  color: var(--color-medium-gray);
+  font-size: 14px;
+  line-height: 1.5;
+  margin: 3px 0 12px 0;
+}
+
+.percentNumber {
+  font-size: var(--font-family-sf);
+  color: var(--color-primary);
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 25.6px;
+}
+
+.percentText {
+  font-size: var(--font-family-sf);
+  color: var(--color-primary);
+  font-size: 8px;
+  font-weight: 400;
+  position: absolute;
+  left: 15px;
+  top: 20px;
+  line-height: 11.22px;
+}
+
+.completeProfileButton {
+  background-color: var(--color-dark-blue);
+}
+
+.completeProfileButton > button {
+  color: var(--color-white);
+  border-radius: 4px;
+  font-weight: 500;
+  padding: 6px;
+  height: 30px;
+  width: 190px;
+  line-height: 14px;
+}

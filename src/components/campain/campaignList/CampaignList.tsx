@@ -4,14 +4,18 @@ import { useMediaQuery } from 'react-responsive';
 
 import styles from './CampaignList.module.css';
 import CampaignCard from '../campaignCard/CampaignCard';
-import { SortComponent } from '../sortComponent/SortComponent';
-import { Campaign } from '../../types';
+import { SortComponent } from '../../sortComponent/SortComponent';
+import { Campaign } from '../../../types';
 
 interface CampaignListProps {
   campaigns: Campaign[];
+  isSearching: boolean;
 }
 
-const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
+const CampaignList: React.FC<CampaignListProps> = ({
+  campaigns,
+  isSearching,
+}) => {
   const isLargeScreen = useMediaQuery({ query: '(min-width: 1000px)' });
   const [viewMode, setViewMode] = useState<'grid' | 'list'>('grid');
 
@@ -25,7 +29,12 @@ const CampaignList: React.FC<CampaignListProps> = ({ campaigns }) => {
     <>
       <div className={styles.sortContainer}>
         <div>
-          <h3>Search results:</h3> <p>{campaigns.length} Blog post campaigns</p>
+          {isSearching ? (
+            <>
+              <h3>Search results:</h3>{' '}
+              <p>{campaigns.length} Blog post campaigns</p>
+            </>
+          ) : null}
         </div>
         {isLargeScreen ? (
           <SortComponent

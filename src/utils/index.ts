@@ -5,7 +5,7 @@ export const formatDate = (postedDate: number) =>
     day: 'numeric',
   }).format(new Date(postedDate));
 
-export const formatBudget = (campaignBudget: string) =>
+export const formatCurrency = (campaignBudget: number | string) =>
   new Intl.NumberFormat('en-US', {
     style: 'currency',
     currency: 'USD',

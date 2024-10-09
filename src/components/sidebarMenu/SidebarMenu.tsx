@@ -1,22 +1,22 @@
 import React, { useState } from 'react';
 import { Menu, Avatar, Typography, Dropdown, List, Button } from 'antd';
 import styles from './SidebarMenu.module.css';
-
-import homeIcon from '../../../public/icons/fluent_home-16-regular.png';
-import compassIcon from '../../../public/icons/compass.svg';
-import messageIcon from '../../../public/icons/compass.svg';
-import earningIcon from '../../../public/icons/earning.svg';
-import settingsIcon from '../../../public/icons/galaSettings0.svg';
-
-import techreviewIcon from '../../../public/icons/techreview.svg';
-import beautyblendIcon from '../../../public/icons/beautyblend.svg';
-import wanderlustIcon from '../../../public/icons/wanderlust.svg';
-import fitnessIcon from '../../../public/icons/fitness.svg';
-import homeharmonyIcon from '../../../public/icons/homeharmony.svg';
-
-import AvartarIcon from '../../../public/icons/profile.svg';
-import dropDownIcon from '../../../public/icons/code.svg';
-import arrowRightIcon from '../../../public/icons/arrow-right.svg';
+import {
+  arrowRightIcon,
+  avatarIcon,
+  beautyblendIcon,
+  compassIcon,
+  dropDownIcon,
+  earningIcon,
+  fitnessIcon,
+  homeharmonyIcon,
+  homeIcon,
+  messageIcon,
+  settingsIcon,
+  techreviewIcon,
+  wanderlustIcon,
+} from '../../assets/icons';
+import { ProfileInformationSmallerScreen } from '../userAccount/profileInformation/ProfileInformation';
 
 const { Text } = Typography;
 
@@ -49,7 +49,9 @@ const profileMenu = (
   />
 );
 
-const SidebarMenu: React.FC = () => {
+const SidebarMenu: React.FC<{
+  isLargeScreen: boolean;
+}> = ({ isLargeScreen }) => {
   const [selectedKey, setSelectedKey] = useState('1');
   return (
     <div className={styles.sidebar}>
@@ -64,7 +66,7 @@ const SidebarMenu: React.FC = () => {
 
         {/* Profile Section */}
         <div className={styles.profileSection}>
-          <img src={AvartarIcon} className={styles.avatar} />
+          <img src={avatarIcon} className={styles.avatar} />
           <div className={styles.profileInfo}>
             <Dropdown overlay={profileMenu} trigger={['click']}>
               <div className={styles.profileNameContainer}>
@@ -99,6 +101,8 @@ const SidebarMenu: React.FC = () => {
             </Menu.Item>
           ))}
         </Menu>
+
+        {!isLargeScreen ? <ProfileInformationSmallerScreen /> : null}
 
         {/* Campaign Shortcuts Section */}
         <div>

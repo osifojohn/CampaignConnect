@@ -1,14 +1,15 @@
 import React, { useState } from 'react';
 import { Modal, Form, Input, Button, Select, Checkbox, Space } from 'antd';
-import styles from './CreateCampaign.module.css';
-
-import instagramLightIcon from '../../../public/icons/instagramLight.svg';
-import youtubeLightIcon from '../../../public/icons/youtubeLight.svg';
-import twitterLightIcon from '../../../public/icons/twitterLight.png';
-import facebookLightIcon from '../../../public/icons/facebookLight.svg';
-import tiktokLightIcon from '../../../public/icons/tiktokLight.svg';
-import CampaignRepository from '../../lib/CampaignRepository';
-import { Campaign } from '../../types';
+import styles from './CreateCampaignForm.module.css';
+import CampaignRepository from '../../../lib/CampaignRepository';
+import { Campaign } from '../../../types';
+import {
+  facebookLightIcon,
+  instagramLightIcon,
+  tiktokLightIcon,
+  twitterLightIcon,
+  youtubeLightIcon,
+} from '../../../assets/icons';
 
 const { TextArea } = Input;
 const { Option } = Select;
@@ -19,7 +20,7 @@ interface CreateCampaignProps {
   onCampaignAdded: () => void;
 }
 
-const CreateCampaign: React.FC<CreateCampaignProps> = ({
+const CreateCampaignForm: React.FC<CreateCampaignProps> = ({
   visible,
   onClose,
   onCampaignAdded,
@@ -27,7 +28,7 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
   const [form] = Form.useForm();
   const [selectedChannels, setSelectedChannels] = useState<string[]>([]);
 
-  const onFinish = (values: any) => {
+  const onFinish = (values: Campaign) => {
     const newCampaign: Campaign = {
       id: Date.now(),
       postedDate: Date.now(),
@@ -45,7 +46,7 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
     form.resetFields();
   };
 
-  const handleChannelChange = (checkedValues: any) => {
+  const handleChannelChange = (checkedValues: string[]) => {
     setSelectedChannels(checkedValues);
   };
 
@@ -218,4 +219,4 @@ const CreateCampaign: React.FC<CreateCampaignProps> = ({
   );
 };
 
-export default CreateCampaign;
+export default CreateCampaignForm;

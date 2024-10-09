@@ -1,14 +1,16 @@
 import React from 'react';
 import { Button, Row, Col } from 'antd';
 import styles from './CampaignCard.module.css';
-import { formatBudget, formatDate } from '../../utils';
-import saveCampaignIcon from '../../../public/icons/saveCampaign.svg';
-import instagramIcon from '../../../public/icons/instagram-fill.svg';
-import tiktokIcon from '../../../public/icons/tiktok.svg';
-import youtubeIcon from '../../../public/icons/youtube.svg';
-import twitterIcon from '../../../public/icons/twitter.svg';
-import facebookIcon from '../../../public/icons/facebook.svg';
-import { Campaign } from '../../types';
+import { formatCurrency, formatDate } from '../../../utils';
+import { Campaign } from '../../../types';
+import {
+  facebookIcon,
+  instagramIcon,
+  saveCampaignIcon,
+  tiktokIcon,
+  twitterIcon,
+  youtubeIcon,
+} from '../../../assets/icons';
 
 type CampaignCardProps = Campaign & {
   viewMode: 'grid' | 'list';
@@ -87,7 +89,7 @@ const CampaignCard: React.FC<CampaignCardProps> = ({
         <Col span={'100%'} className={styles.buttomSection}>
           <div className={styles.budgetWrapper}>
             <p>Budget</p>
-            <h4>{formatBudget(campaignBudget)}</h4>
+            <h4>{formatCurrency(campaignBudget)}</h4>
           </div>
           <Button type="primary">Apply Now</Button>
         </Col>

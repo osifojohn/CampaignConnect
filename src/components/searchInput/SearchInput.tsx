@@ -53,19 +53,10 @@ const SearchInput: React.FC<SearchInputProps> = ({
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setInputValue(e.target.value);
-  };
+    const value = e.target.value;
+    setInputValue(value);
 
-  const handleSearch = () => {
-    if (inputValue.trim()) {
-      onSearch(inputValue);
-    }
-  };
-
-  const handleKeyDown = (e: React.KeyboardEvent<HTMLInputElement>) => {
-    if (e.key === 'Enter') {
-      handleSearch();
-    }
+    onSearch(value);
   };
 
   return (
@@ -75,7 +66,6 @@ const SearchInput: React.FC<SearchInputProps> = ({
         placeholder={placeholder}
         value={inputValue}
         onChange={handleInputChange}
-        onKeyDown={handleKeyDown}
         className={styles.searchInput}
       />
     </div>

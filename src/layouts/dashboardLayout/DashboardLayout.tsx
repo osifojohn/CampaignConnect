@@ -7,14 +7,15 @@ import {
   DesktopHeader,
   MobileHeader,
 } from '../../components/customHeader/CustomHeader';
-import CreateCampaign from '../../components/createCampaignForm/CreateCampaign';
+import CreateCampaignForm from '../../components/campain/createCampaignForm/CreateCampaignForm';
 
 const { Header, Content, Sider } = Layout;
 
 const DashBoardLayout: React.FC<{
   children: React.ReactNode;
   onCampaignAdded: () => void;
-}> = ({ children, onCampaignAdded }) => {
+  isLargeScreen: boolean;
+}> = ({ children, onCampaignAdded, isLargeScreen }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
   const [campaignModalVisible, setCampaignModalVisible] = useState(false);
 
@@ -36,7 +37,7 @@ const DashBoardLayout: React.FC<{
       {/* Sidebar for non-mobile screens */}
       {!isMobile ? (
         <Sider width={326} theme="light" className={styles.sider}>
-          <SidebarMenu />
+          <SidebarMenu isLargeScreen={isLargeScreen} />
         </Sider>
       ) : (
         <Drawer
@@ -46,7 +47,7 @@ const DashBoardLayout: React.FC<{
           open={drawerVisible}
           width={getDrawerWidth()}
         >
-          <SidebarMenu />
+          <SidebarMenu isLargeScreen={isLargeScreen} />
         </Drawer>
       )}
 
@@ -71,7 +72,7 @@ const DashBoardLayout: React.FC<{
 
         <Content className={styles.content}>{children}</Content>
 
-        <CreateCampaign
+        <CreateCampaignForm
           visible={campaignModalVisible}
           onClose={toggleCampaignModal}
           onCampaignAdded={onCampaignAdded}

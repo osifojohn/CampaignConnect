@@ -4,7 +4,7 @@
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  color: white;
+  color: var(--color-text-light);
   border-radius: 16px;
   overflow: hidden;
   padding: 0 10px;
@@ -17,7 +17,7 @@
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 39, 102, 0.8);
+  background-color: var(--color-overlay);
   z-index: 1;
 }
 
@@ -28,25 +28,17 @@
 .financialOverviewCard .summary {
   position: relative;
   z-index: 2;
-  color: #e9e9e9;
+  color: var(--color-text-light);
 }
 
 .financialOverviewCard .ant-card-body {
-  color: white;
+  color: var(--color-text-light);
   z-index: 1000;
 }
 
 .financialOverviewCard .ant-card-head-title {
-  color: white !important;
+  color: var(--color-text-light) !important;
 }
-
-/* .ant-card-head-title {
-  color: white;
-  font-family: 'SF Pro Display';
-  font-size: 20px;
-  line-height: 32px;
-  z-index: 1000;
-} */
 
 .financialOverviewCard p {
   margin-bottom: 0px;
@@ -54,7 +46,7 @@
 
 .financialOverviewCard h2 {
   margin-top: 0;
-  color: #ffffff;
+  color: var(--color-text-light);
 }
 
 .viewAllCampains {
@@ -64,8 +56,8 @@
   top: 15px;
   display: flex;
   align-items: center;
-  color: #e9e9e9;
-  font-family: 'SF Pro Display';
+  color: var(--color-text-light);
+  font-family: var(--font-family-sf);
   font-size: 16px;
   font-weight: 400;
   line-height: 25.6px;
@@ -84,7 +76,7 @@
   font-size: 12px;
   display: flex;
   align-items: center;
-  font-family: 'SF Pro Display';
+  font-family: var(--font-family-sf);
 }
 
 .summary > :first-child {
@@ -100,21 +92,21 @@
   font-weight: 400;
   display: flex;
   align-items: center;
-  font-family: 'SF Pro Display';
+  font-family: var(--font-family-sf);
 }
 
 .summaryTotal {
-  font-family: 'SF Pro Display' !important;
+  font-family: var(--font-family-sf) !important;
   font-weight: 700;
   margin-right: 16px;
 }
 
 .summaryName {
-  font-family: 'SF Pro Display' !important;
+  font-family: var(--font-family-sf) !important;
   font-weight: 400 !important;
   font-size: 16px;
   line-height: 25.6px;
-  color: #ffffff;
+  color: var(--color-text-light);
 }
 
 .ellipesWhite {

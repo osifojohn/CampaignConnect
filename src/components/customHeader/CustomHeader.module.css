@@ -4,10 +4,10 @@
   align-items: center;
   padding: 0 16px;
   width: 100%;
-  background: #fff;
-  font-family: 'SF Pro Display';
+  background: var(--color-background);
+  font-family: var(--font-family-sf);
   position: relative;
-  box-shadow: rgba(0, 0, 0, 0.1);
+  box-shadow: var(--color-shadow);
 }
 
 .menuButton {
@@ -26,7 +26,7 @@
 }
 
 .logo {
-  font-family: 'Neue Montreal';
+  font-family: var(--font-family-neue);
   font-size: 18px;
   font-weight: 700;
 }
@@ -45,7 +45,7 @@
   font-size: 18px;
   line-height: 21.6px;
   font-weight: 500;
-  font-family: 'Neue Montreal';
+  font-family: var(--font-family-neue);
 }
 
 .dashboardHeaderRightSection {
@@ -55,8 +55,8 @@
 }
 
 .dashboardHeaderRightSection > button {
-  background: #002766;
-  font-family: 'SF Pro Display';
+  background: var(--color-primary);
+  font-family: var(--font-family-sf);
   font-size: 14px;
   font-weight: 500;
 }
@@ -73,13 +73,7 @@
   align-items: center;
 }
 
-.iconsWrapper:first-child {
-  width: 15px;
-  height: 15px;
-  margin-right: 30px;
-  cursor: pointer;
-}
-
+.iconsWrapper:first-child,
 .iconsWrapper:last-child {
   width: 15px;
   height: 15px;
