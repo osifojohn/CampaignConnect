@@ -6,7 +6,7 @@ import { ROUTES } from '../routes/routeEnum';
 const Landing = () => {
   const [loading, setLoading] = useState(true);
   const navigate = useNavigate();
-  const targetUrl = ROUTES.LANDING;
+  const targetUrl = ROUTES.DASHBOARD_HOME;
   const delay = 2000;
 
   useEffect(() => {
@@ -22,7 +22,6 @@ const Landing = () => {
     <div className="redirect-container">
       {loading ? (
         <div className="loading-spinner">
-          {/* <p>Loading...</p> */}
           <LoadingOutlined />
         </div>
       ) : null}
