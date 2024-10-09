@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styles from './SearchComponent.module.css';
-import searchIcon from '../../../public/icons/searchIcon.svg';
 import { SearchOutlined } from '@ant-design/icons';
+import { searchIcon } from '../../assets/icons';
 
 interface SearchInputProps {
   onSearch: (value: string) => void;

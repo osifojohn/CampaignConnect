@@ -1,6 +1,6 @@
 {
   "name": "Olivia Jacobs",
-  "profileImage": "../../../public/icons/profile.svg",
+  "profileImage": "/icons/profile.svg",
   "profileCompletion": 70,
   "instructions": "Complete your profile with details showcasing your skills and personality.",
   "profileLink": "#"

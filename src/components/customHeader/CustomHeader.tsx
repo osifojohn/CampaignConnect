@@ -2,10 +2,11 @@ import React from 'react';
 import { Layout, Avatar, Button } from 'antd';
 import { MenuOutlined, PlusOutlined } from '@ant-design/icons';
 import styles from './CustomHeader.module.css';
-
-import notificationIcon from '../../../public/icons/notification.svg';
-import messageIcon from '../../../public/icons/message.svg';
-import ellipesRedIcon from '../../../public/icons/ellipes-red.svg';
+import {
+  ellipesRedIcon,
+  messageIcon,
+  notificationIcon,
+} from '../../assets/icons';
 
 const { Header } = Layout;
 

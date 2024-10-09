@@ -62,9 +62,6 @@ body {
   padding: 0px 0px 9px 0px !important;
 }
 
-.ant-progress-text {
-}
-
 @media (max-width: 999px) {
   .ant-layout {
     background: var(--color-background);
@@ -78,6 +75,16 @@ body {
   justify-content: space-between;
   align-items: center;
   margin: 30px 0 0 0;
+}
+
+.smallerScreenToggleCampainBtnWrapper {
+  display: flex;
+  justify-content: end;
+  padding-bottom: 30px;
+}
+
+.smallerScreenToggleCampainBtnWrapper > button {
+  background: var(--color-primary);
 }
 
 .list-grid-icons i {

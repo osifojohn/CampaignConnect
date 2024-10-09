@@ -8,23 +8,22 @@ import {
   MobileHeader,
 } from '../../components/customHeader/CustomHeader';
 import CreateCampaignForm from '../../components/campain/createCampaignForm/CreateCampaignForm';
+import { useCampaignModal } from '../../contexts/CampaignModalContext';
+import { useDashboardContext } from '../../contexts/DashboardContext';
 
 const { Header, Content, Sider } = Layout;
 
 const DashBoardLayout: React.FC<{
   children: React.ReactNode;
-  onCampaignAdded: () => void;
-  isLargeScreen: boolean;
-}> = ({ children, onCampaignAdded, isLargeScreen }) => {
+}> = ({ children }) => {
   const [drawerVisible, setDrawerVisible] = useState(false);
-  const [campaignModalVisible, setCampaignModalVisible] = useState(false);
+  const { campaignModalVisible, toggleCampaignModal } = useCampaignModal();
 
+  const { isLargeScreen, updateCampaigns } = useDashboardContext();
   const isMobile = useMediaQuery({ maxWidth: 768 });
   const isTablet = useMediaQuery({ minWidth: 769, maxWidth: 1024 });
 
   const toggleDrawer = () => setDrawerVisible(!drawerVisible);
-  const toggleCampaignModal = () =>
-    setCampaignModalVisible(!campaignModalVisible);
 
   const getDrawerWidth = () => {
     if (isMobile) return '80%';
@@ -34,7 +33,6 @@ const DashBoardLayout: React.FC<{
 
   return (
     <Layout className={styles.layout}>
-      {/* Sidebar for non-mobile screens */}
       {!isMobile ? (
         <Sider width={326} theme="light" className={styles.sider}>
           <SidebarMenu isLargeScreen={isLargeScreen} />
@@ -75,7 +73,7 @@ const DashBoardLayout: React.FC<{
         <CreateCampaignForm
           visible={campaignModalVisible}
           onClose={toggleCampaignModal}
-          onCampaignAdded={onCampaignAdded}
+          onCampaignAdded={updateCampaigns}
         />
       </Layout>
     </Layout>
