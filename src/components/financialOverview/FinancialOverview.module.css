@@ -1,3 +1,7 @@
+.financialOverviewBox {
+  /* background-color: red; */
+}
+
 .financialOverviewCard {
   position: relative;
   background-image: url('../../../public/icons/financialOverviewBcg.svg');
@@ -34,33 +38,37 @@
 .financialOverviewCard .ant-card-body {
   color: var(--color-text-light);
   z-index: 1000;
+  font-size: clamp(0.625rem, 1vw + 0.5rem, 1rem);
 }
 
 .financialOverviewCard .ant-card-head-title {
   color: var(--color-text-light) !important;
+  font-size: clamp(0.75rem, 1.5vw + 0.5rem, 1.25rem);
 }
 
 .financialOverviewCard p {
-  margin-bottom: 0px;
+  margin-bottom: 0;
+  font-size: clamp(0.5rem, 0.75vw + 0.5rem, 1rem);
 }
 
 .financialOverviewCard h2 {
   margin-top: 0;
   color: var(--color-text-light);
+  font-size: clamp(1rem, 2vw + 0.5rem, 1.5rem);
 }
 
-.viewAllCampains {
+.viewAllCampains > a {
   position: absolute;
   right: 10px;
   z-index: 2;
   top: 15px;
   display: flex;
   align-items: center;
-  color: var(--color-text-light);
+  color: var(--color-white) !important;
   font-family: var(--font-family-sf);
-  font-size: 16px;
+  font-size: clamp(0.625rem, 1vw + 0.5rem, 1rem);
   font-weight: 400;
-  line-height: 25.6px;
+  line-height: 1.6;
 }
 
 .finantialOverviewItem {
@@ -73,7 +81,7 @@
 
 .summary {
   margin-top: 20px;
-  font-size: 12px;
+  font-size: clamp(0.5rem, 0.75vw + 0.5rem, 0.875rem);
   display: flex;
   align-items: center;
   font-family: var(--font-family-sf);
@@ -81,8 +89,8 @@
 
 .summary > :first-child {
   font-weight: 500;
-  font-size: 16px;
-  line-height: 25.6px;
+  font-size: clamp(0.625rem, 1vw + 0.5rem, 1rem);
+  line-height: 1.6;
   margin-right: 16px;
   display: flex;
   align-items: center;
@@ -93,22 +101,24 @@
   display: flex;
   align-items: center;
   font-family: var(--font-family-sf);
+  font-size: clamp(0.5rem, 0.75vw + 0.5rem, 1rem);
 }
 
 .summaryTotal {
   font-family: var(--font-family-sf) !important;
   font-weight: 700;
   margin-right: 16px;
+  font-size: clamp(0.625rem, 1vw + 0.5rem, 1rem);
 }
 
 .summaryName {
   font-family: var(--font-family-sf) !important;
   font-weight: 400 !important;
-  font-size: 16px;
-  line-height: 25.6px;
-  color: var(--color-text-light);
+  font-size: clamp(0.625rem, 1vw + 0.5rem, 1rem);
+  line-height: 1.6;
 }
 
 .ellipesWhite {
   margin: 0 8px;
+  font-size: clamp(0.5rem, 0.75vw + 0.5rem, 0.875rem);
 }

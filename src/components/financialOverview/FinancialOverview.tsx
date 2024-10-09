@@ -16,13 +16,18 @@ const FinancialOverview: React.FC<FinancialOverviewProps> = ({
   data,
 }) => {
   return (
-    <Col xs={24} md={isLargeScreen ? 16 : 24}>
+    <Col
+      xs={24}
+      md={isLargeScreen ? 16 : 24}
+      className={styles.financialOverviewBox}
+    >
       <Card
         title="Financial Overview"
         extra={
-          <a href="#" className={styles.viewAllCampaigns}>
-            View all campaigns <img src={iconOpenOutline} alt="" />
-          </a>
+          <div className={styles.viewAllCampaigns}>
+            <a href="#">View all campaigns </a>
+            <img src={iconOpenOutline} alt="" />
+          </div>
         }
         className={styles.financialOverviewCard}
       >

@@ -1,7 +1,7 @@
 [
   {
     "id": 1,
-    "campaignTitle": "Summer Sale Blast",
+    "campaignTitle": "Summer Sale",
     "brandName": "BrandX",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Join us for an exciting summer sale with up to 50% off! Shop a wide range of products including clothing, accessories, electronics, and more. This is the perfect opportunity to refresh your wardrobe or upgrade your gadgets at unbeatable prices. Don't miss out on these limited-time offers, valid both online and in stores. With discounts across all categories, there's something for everyone. Get ready for the ultimate summer shopping experience and enjoy savings like never before.",
@@ -17,7 +17,7 @@
   },
   {
     "id": 2,
-    "campaignTitle": "Blockbuster Release",
+    "campaignTitle": "Blockbuster ",
     "brandName": "MovieMax",
     "campaignCategory": "Movie",
     "campaignDescription": "Watch the latest blockbuster in theaters near you. Experience the thrill of action, drama, and suspense with cutting-edge cinematography and sound effects. This movie promises to be the talk of the season with its star-studded cast and captivating storyline. Whether you're a fan of heart-pounding action or touching emotional moments, this film delivers it all. Bring your friends and family along for a cinematic journey that will leave you wanting more. Make sure to grab your tickets early, as this release is bound to sell out fast!",
@@ -27,7 +27,7 @@
   },
   {
     "id": 3,
-    "campaignTitle": "Holiday Giveaway",
+    "campaignTitle": "Holiday ",
     "brandName": "GiveItAway",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Enter to win amazing prizes this holiday season! From gift cards to electronics, there's something for everyone in this festive giveaway. Celebrate the joy of giving with our biggest holiday event yet. The more entries you have, the better your chances of winning! Participate by completing simple tasks like following our social media accounts and sharing our campaign with your friends. This is your opportunity to kick off the holiday season in style and score some fantastic gifts for yourself or your loved ones. Don't miss out!",
@@ -43,7 +43,7 @@
   },
   {
     "id": 4,
-    "campaignTitle": "New Game Launch",
+    "campaignTitle": "New Game",
     "brandName": "GameZone",
     "campaignCategory": "Games",
     "campaignDescription": "Get ready for the ultimate gaming experience with our new game launch! Featuring cutting-edge graphics, immersive gameplay, and a captivating storyline, this is the game that everyone's been waiting for. Whether you're a seasoned gamer or a casual player, you'll find plenty to love in this action-packed title. Explore vast worlds, complete challenging quests, and compete with friends or players from around the world. Pre-order now to get exclusive in-game bonuses and early access. This is a gaming experience you won't want to miss.",
@@ -53,7 +53,7 @@
   },
   {
     "id": 5,
-    "campaignTitle": "Back to School",
+    "campaignTitle": "School",
     "brandName": "EduPlus",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Everything you need for the new school year is available now with EduPlus! From the latest tech gadgets to stationery essentials, we have everything to make your back-to-school experience smooth and stylish. Our collection is designed to cater to students of all ages, helping them stay organized and focused. Whether you're looking for notebooks, backpacks, or laptops, we have the perfect products to suit your needs. Shop our special offers and enjoy discounts that will make going back to school even more exciting. Don't miss out!",
@@ -69,7 +69,7 @@
   },
   {
     "id": 6,
-    "campaignTitle": "Winter Fashion Fest",
+    "campaignTitle": "Fashion",
     "brandName": "StyleNow",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Show off your style this winter with exclusive offers at the Winter Fashion Fest! From cozy knits to chic coats, we have everything you need to stay warm and stylish this season. Discover the latest trends and must-have pieces from top designers at unbeatable prices. Whether you're dressing up for a holiday party or bundling up for a day out, our collection has something for every occasion. Shop now and take advantage of limited-time discounts and promotions. This is your chance to revamp your wardrobe with the best winter fashion deals.",
@@ -79,7 +79,7 @@
   },
   {
     "id": 7,
-    "campaignTitle": "Fitness Challenge",
+    "campaignTitle": "Fitness",
     "brandName": "FitLife",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Join our fitness challenge and win big! Whether you're looking to kickstart your fitness journey or push yourself to new limits, this challenge is for you. Participate in daily workouts, track your progress, and compete with others for a chance to win amazing prizes. Our challenge is designed for all fitness levels, with customizable plans that fit your lifestyle. Stay motivated and inspired with support from our community of fitness enthusiasts. Sign up today and get ready to transform your body and mind. Let the challenge begin!",
@@ -89,7 +89,7 @@
   },
   {
     "id": 8,
-    "campaignTitle": "Epic Movie Marathon",
+    "campaignTitle": "Epic Movie",
     "brandName": "CineWorld",
     "campaignCategory": "Movie",
     "campaignDescription": "Watch the best movies of the year back-to-back in our epic movie marathon! Get ready for an unforgettable cinematic experience with a lineup of blockbuster hits that will keep you on the edge of your seat. Whether you're a fan of action, drama, or comedy, there's something for everyone in this marathon. Grab your popcorn, sit back, and enjoy hours of non-stop entertainment. This is the perfect way to catch up on the biggest movies of the year. Don't miss this exclusive event – reserve your spot now!",
@@ -105,7 +105,7 @@
   },
   {
     "id": 9,
-    "campaignTitle": "Concert Ticket Giveaway",
+    "campaignTitle": "Concert",
     "brandName": "MusicFest",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Win free tickets to the concert of the year! This is your chance to see your favorite artists live on stage. Enter our giveaway for a chance to win tickets to the hottest concert event of the season. Simply follow our social media accounts, share our post, and tag your friends for a chance to win. The more you engage, the better your chances! Don't miss out on this once-in-a-lifetime opportunity to enjoy live music with friends and family. Join the giveaway today and be part of the excitement.",
@@ -121,7 +121,7 @@
   },
   {
     "id": 10,
-    "campaignTitle": "E-sports Championship",
+    "campaignTitle": "E-sports",
     "brandName": "GameMaster",
     "campaignCategory": "Games",
     "campaignDescription": "Compete in the ultimate e-sports championship! This is your chance to prove your skills and compete against the best players in the world. Whether you're a seasoned pro or a rising star, this championship offers thrilling matches, intense competition, and a massive prize pool. Play your favorite games, climb the leaderboards, and earn your spot in the finals. With live broadcasts and fan engagement, this is the event of the year for gamers everywhere. Register now and get ready to take your gaming to the next level.",
@@ -137,7 +137,7 @@
   },
   {
     "id": 11,
-    "campaignTitle": "Spring Collection Launch",
+    "campaignTitle": "Spring Launch",
     "brandName": "BloomWear",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Get ready to bloom with our Spring Collection! Featuring bright colors, bold patterns, and fresh designs, this collection is perfect for stepping into the new season in style. Whether you're updating your wardrobe or adding a few new statement pieces, we have something for everyone. Shop our collection now and enjoy limited-time discounts on our most popular items. Don't wait – these springtime essentials are flying off the shelves! Be the first to experience the latest trends in fashion.",
@@ -147,7 +147,7 @@
   },
   {
     "id": 12,
-    "campaignTitle": "Healthy Living Tips",
+    "campaignTitle": "Living Tips",
     "brandName": "HealthFirst",
     "campaignCategory": "Movie",
     "campaignDescription": "Kickstart your journey to a healthier lifestyle with HealthFirst! We're sharing top tips for eating well, staying active, and maintaining mental wellness. Whether you're looking for nutritious recipes or workout inspiration, we've got you covered. Follow us on social media for daily motivation, expert advice, and a supportive community of health-conscious individuals. Let's make this year the healthiest one yet! Join us and take the first step toward better living. Your journey starts now.",
@@ -157,7 +157,7 @@
   },
   {
     "id": 13,
-    "campaignTitle": "Sustainable Fashion",
+    "campaignTitle": "Fashion",
     "brandName": "EcoChic",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Discover sustainable fashion at its finest with EcoChic. Our collection features eco-friendly fabrics, ethically made pieces, and timeless designs that are as good for the planet as they are for your wardrobe. Shop with a clear conscience and enjoy stylish, durable clothing that makes a difference. This season, make a statement with fashion that reflects your values. Explore our new arrivals and take advantage of exclusive discounts for first-time customers. Join the movement toward a more sustainable future in fashion.",
@@ -173,7 +173,7 @@
   },
   {
     "id": 14,
-    "campaignTitle": "Adventure Travel Deals",
+    "campaignTitle": "Travel Deals",
     "brandName": "GlobeTrotter",
     "campaignCategory": "Movie",
     "campaignDescription": "Ready for your next adventure? Discover amazing travel deals with GlobeTrotter! From mountain treks to beach getaways, we have the perfect trip for every type of traveler. Our exclusive packages include everything you need for a worry-free vacation, from flights and accommodations to guided tours and local experiences. Book now to enjoy limited-time offers on popular destinations around the world. Don't wait – these deals won't last long! Start planning your dream trip today with GlobeTrotter.",
@@ -183,7 +183,7 @@
   },
   {
     "id": 15,
-    "campaignTitle": "New Fitness Apparel",
+    "campaignTitle": "New Fitness",
     "brandName": "ActiveWear",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Step up your fitness game with the latest in high-performance activewear from ActiveWear. Our collection is designed for maximum comfort, style, and durability, perfect for both intense workouts and casual wear. From moisture-wicking fabrics to ergonomic designs, our products are crafted to help you perform at your best. Shop now and take advantage of special discounts on our newest arrivals. Whether you're hitting the gym or running errands, ActiveWear has the perfect fit for your lifestyle.",
@@ -199,7 +199,7 @@
   },
   {
     "id": 16,
-    "campaignTitle": "Exclusive Dining Offers",
+    "campaignTitle": "Dining Offers",
     "brandName": "FoodieNation",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Treat yourself to a dining experience like no other with exclusive offers from FoodieNation. From gourmet restaurants to casual eateries, we've partnered with top chefs and local favorites to bring you the best dining deals in town. Whether you're celebrating a special occasion or just looking to try something new, our offers make it easy to enjoy great food at unbeatable prices. Book your table now and indulge in culinary delights that will leave your taste buds wanting more.",
@@ -215,7 +215,7 @@
   },
   {
     "id": 17,
-    "campaignTitle": "Pet Care Essentials",
+    "campaignTitle": "Pet Care",
     "brandName": "PetPal",
     "campaignCategory": "Movie",
     "campaignDescription": "Keep your pets happy and healthy with PetPal's range of essential pet care products. From nutritious food and treats to grooming supplies and toys, we have everything you need to care for your furry friends. Our products are carefully selected to ensure the highest quality and safety for your pets. Shop now and enjoy discounts on our most popular items. Whether you have a dog, cat, or other small animals, PetPal has the perfect products to keep them active, healthy, and loved.",
@@ -225,7 +225,7 @@
   },
   {
     "id": 18,
-    "campaignTitle": "Winter Sports Gear",
+    "campaignTitle": "Winter Sports",
     "brandName": "SnowPro",
     "campaignCategory": "Games",
     "campaignDescription": "Gear up for the winter sports season with SnowPro! Whether you're hitting the slopes for skiing or snowboarding, we have all the equipment and apparel you need to stay warm and safe. Our selection includes top brands known for their durability and performance in extreme conditions. From jackets and boots to helmets and goggles, SnowPro has everything to help you make the most of your winter adventures. Shop now and take advantage of special discounts on winter sports gear.",
@@ -235,7 +235,7 @@
   },
   {
     "id": 19,
-    "campaignTitle": "Eco-Friendly Home Products",
+    "campaignTitle": "Home Products",
     "brandName": "GreenLiving",
     "campaignCategory": "Entertainment",
     "campaignDescription": "Make your home more sustainable with GreenLiving's eco-friendly products. From energy-saving appliances to reusable household items, we offer everything you need to reduce your environmental footprint without sacrificing comfort or style. Shop our collection of sustainable home goods and enjoy exclusive discounts for first-time buyers. Whether you're looking to make small changes or completely overhaul your home, GreenLiving has the perfect solutions for a greener, healthier lifestyle.",
@@ -251,7 +251,7 @@
   },
   {
     "id": 20,
-    "campaignTitle": "Tech Gadgets Sale",
+    "campaignTitle": "Gadgets Sale",
     "brandName": "TechWorld",
     "campaignCategory": "Games",
     "campaignDescription": "Upgrade your tech game with TechWorld's biggest sale of the year! Whether you're looking for the latest smartphones, laptops, or smart home devices, we have it all at unbeatable prices. Our selection features top brands and the latest innovations, making it the perfect time to invest in new gadgets. Shop now and take advantage of limited-time discounts on everything from gaming consoles to wireless earbuds. Don't miss out – this sale is your chance to score the best deals on cutting-edge tech products.",

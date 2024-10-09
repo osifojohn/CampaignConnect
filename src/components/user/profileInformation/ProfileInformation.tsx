@@ -13,7 +13,7 @@ const ProfileInformationBigScreen: React.FC<ProfileInformationProps> = ({
   data,
 }) => {
   return (
-    <Col xs={24} md={8}>
+    <Col xs={24} md={8} className={styles.profileInfoBox}>
       <Card
         title="Profile Information"
         extra={

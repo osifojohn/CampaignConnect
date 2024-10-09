@@ -9,8 +9,9 @@ import {
   DesktopSearchInput,
   MobileSearchInput,
 } from '../../components/searchInput/SearchInput';
-import { ProfileInformationBigScreen } from '../../components/userAccount/profileInformation/ProfileInformation';
+
 import { FinancialOverViewData, ProfileData } from '../../types';
+import { ProfileInformationBigScreen } from '../../components/user/profileInformation/ProfileInformation';
 
 const Dashboard = () => {
   const { toggleCampaignModal } = useCampaignModal();

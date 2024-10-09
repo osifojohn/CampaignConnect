@@ -1,16 +1,17 @@
 .card {
   border-radius: 16px;
   margin-bottom: 16px;
-  background: #fff;
-  font-family: 'SF Pro Display';
-  box-shadow: rgba(0, 0, 0, 0.1);
+  background: var(--color-white);
+  font-family: var(--font-family-sf);
+  box-shadow: var(--color-shadow);
   padding: 14px 7px;
 }
 
 .header {
   display: flex;
   align-items: center;
-  height: 48px;
+  /* height: 48px; */
+  margin: 0;
 }
 
 .header > :nth-child(2) {
@@ -36,11 +37,11 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background-color: red;
+  background-color: #b2007a;
   text-transform: uppercase;
   padding: 10px 20px;
   color: #ffffff;
-  font-family: 'SF Pro Display';
+  font-family: var(--font-family-sf);
   font-weight: 15px;
   line-height: 28.8px;
   border-radius: 4px;
@@ -51,9 +52,9 @@
   padding: 0;
   font-weight: 400;
   font-size: 14px;
-  font-family: 'SF Pro Display';
+  font-family: var(--font-family-sf);
   line-height: 22.4px;
-  color: #053559;
+  color: var(--color-dim-gray);
 }
 
 .postedDaysAgo {
@@ -61,21 +62,21 @@
   align-items: center;
 }
 
-.title {
+.campaignTitle {
   margin: 0;
   padding: 0;
   font-weight: 700;
   font-size: 16px;
-  font-family: 'SF Pro Display';
+  font-family: var(--font-family-sf);
   line-height: 25.6px;
-  color: #595959;
+  color: var(--color-primary);
 }
 
 .description {
   font-size: 14px;
   line-height: 22.4px;
   font-family: 'SF Pro Display';
-  color: #595959;
+  color: var(--color-primary);
   line-height: 22.4px;
   margin: 9px 0;
 }
@@ -85,7 +86,7 @@
   line-height: 22.4px;
   font-weight: 500;
   font-family: 'SF Pro Display';
-  color: #053559;
+  color: var(--color-primary);
   line-height: 22.4px;
 }
 
@@ -99,7 +100,7 @@
   line-height: 22.4px;
   font-weight: 500;
   font-family: 'SF Pro Display';
-  color: #053559;
+  color: var(--color-primary);
   line-height: 22.4px;
 }
 
@@ -114,8 +115,8 @@
   font-size: 14px;
   line-height: 22.4px;
   font-weight: 500;
-  font-family: 'SF Pro Display';
-  color: #053559;
+  font-family: var(--font-family-sf);
+  color: var(--color-primary);
   line-height: 22.4px;
   display: flex;
   width: 100%;
@@ -124,10 +125,10 @@
 }
 
 .buttomSection > button {
-  background-color: #053559;
+  color: var(--color-white);
   font-size: 14px;
   line-height: 22.4px;
-  font-family: 'SF Pro Display';
+  background-color: var(--color-primary);
 }
 
 .budgetWrapper > p {

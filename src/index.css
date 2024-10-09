@@ -15,6 +15,7 @@
   --color-dark-blue: #001529;
   --color-light-gray: #d9d9d9;
   --color-gray: #888;
+  --color-dim-gray: #595959;
   --color-medium-gray: #737373;
   --color-dark-blue-hover: #002a80;
 }
@@ -26,9 +27,15 @@ body {
   font-family: var(--font-family-sf);
 }
 
+/* overriding ant ui default styles */
 .ant-menu-item-selected {
   background-color: var(--color-primary) !important;
   color: var(--color-text-light) !important;
+}
+
+.ant-card-head-title {
+  color: var(--color-white);
+  z-index: 2;
 }
 
 .ant-list-item-meta {
@@ -60,6 +67,17 @@ body {
 
 .ant-card-body {
   padding: 0px 0px 9px 0px !important;
+}
+
+.ant-card-extra {
+  color: var(--color-white);
+  z-index: 2;
+}
+
+@media (max-width: 999px) {
+  .ant-drawer-header {
+    display: none !important;
+  }
 }
 
 @media (max-width: 999px) {
@@ -106,4 +124,23 @@ body {
 .list-view .ant-card {
   width: 100%;
   margin-bottom: 16px;
+}
+
+.redirect-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.8);
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+}
+
+.loading-spinner {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  color: #555;
+  text-align: center;
 }

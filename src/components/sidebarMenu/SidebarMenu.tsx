@@ -12,11 +12,12 @@ import {
   homeharmonyIcon,
   homeIcon,
   messageIcon,
+  notificationIcon,
   settingsIcon,
   techreviewIcon,
   wanderlustIcon,
 } from '../../assets/icons';
-import { ProfileInformationSmallerScreen } from '../userAccount/profileInformation/ProfileInformation';
+import { ProfileInformationSmallerScreen } from '../user/profileInformation/ProfileInformation';
 
 const { Text } = Typography;
 
@@ -62,6 +63,9 @@ const SidebarMenu: React.FC<{
           <Typography.Title level={4} className={styles.title}>
             Micro-Influx
           </Typography.Title>
+          {!isLargeScreen && (
+            <div> {renderIcon(notificationIcon, '', '17px')}</div>
+          )}
         </div>
 
         {/* Profile Section */}
