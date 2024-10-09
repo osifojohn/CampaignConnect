@@ -1,50 +1,80 @@
-# React + TypeScript + Vite
+# **CampaignConnect Frontend**
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+This project is a dynamic, responsive web application for an Campaign platform, built using **React.js**, **TypeScript**, **Ant Ui**.The application interacts with a respository class as the storage and to fetch, add, and display data, ensuring a seamless user experience.
 
-Currently, two official plugins are available:
+## **Table of Contents**
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- [Project Overview](#project-overview)
+- [Technologies Used](#technologies-used)
+- [Setup Instructions](#setup-instructions)
+- [Project Structure](#project-structure)
+- [Future Improvements](#future-improvements)
+- [Author](#author)
 
-## Expanding the ESLint configuration
+## **Project Overview**
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+The \*CampaignConnect frontend application dynamically fetches and displays the following information:
 
-- Configure the top-level `parserOptions` property like this:
+- User related data and available added campain information.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+## **Technologies Used**
+
+- **React.js**
+- **TypeScript**
+- **Ant UI**
+
+## **Setup Instructions**
+
+To set up and run this project locally, follow these steps:
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/osifojohn/CampaignConnect.git
+cd devheit-task
 ```
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+### 2. Install Dependencies
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+Run the following command to install the necessary dependencies:
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
+```bash
+npm install
 ```
+
+### 4. Start the Vue Development Server
+
+To start the development server for the Vue.js frontend:
+
+```bash
+npm run dev
+```
+
+The frontend will run at `http://localhost:5174/`.
+
+## **Project Structure**
+
+```
+src-directory/
+├── assets/           # Contains images, fonts, and other static assets
+├── components/       # Reusable React components
+├── lib/              # Library functions and utilities
+├── layouts/          # Shared application layouts
+├── routes/           # Application page routes
+├── router/           # A Router Router configuration and navigation
+├── types/            # Type definitions for TypeScript
+├── pages/            # React components representing different pages
+├── App.tsx           # Main application component
+├── main.ts           # Entry point for the application
+
+```
+
+## **Future Improvements**
+
+- Complete pages under construction.
+
+## **Author**
+
+[Osifo John](https://github.com/osifojohn)
+
+Feel free to explore, contribute, or raise issues!

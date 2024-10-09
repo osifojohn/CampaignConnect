@@ -132,7 +132,7 @@ body {
   align-items: center;
   height: 100vh;
   width: 100vw;
-  background-color: rgba(255, 255, 255, 0.8);
+  background-color: var(--color-white);
   position: absolute;
   top: 0;
   left: 0;
@@ -141,6 +141,6 @@ body {
 
 .loading-spinner {
   font-size: clamp(1rem, 2vw, 1.5rem);
-  color: #555;
+  color: var(--color-dim-gray);
   text-align: center;
 }
