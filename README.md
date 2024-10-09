@@ -13,9 +13,10 @@ This project is a dynamic, responsive web application for an Campaign platform, 
 
 ## **Project Overview**
 
-The \*CampaignConnect frontend application dynamically fetches and displays the following information:
+The CampaignConnect frontend application dynamically fetches and displays the following information:
 
-- User related data and available added campain information.
+- User related and campain data
+- Add new campain
 
 ## **Technologies Used**
 
@@ -60,7 +61,10 @@ src-directory/
 ├── components/       # Reusable React components
 ├── lib/              # Library functions and utilities
 ├── layouts/          # Shared application layouts
-├── routes/           # Application page routes
+├── hooks/            # Reuseable hooks throughout the application
+├── utils/            # Reuseable utility functions
+├── contexts/         # Reuseable contexts throughout the application
+├── data/             # Stored json application data
 ├── router/           # A Router Router configuration and navigation
 ├── types/            # Type definitions for TypeScript
 ├── pages/            # React components representing different pages
